@@ -9,8 +9,9 @@
 
 body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   background-color: #F3F6F9;
 
