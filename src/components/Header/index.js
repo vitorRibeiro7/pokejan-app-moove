@@ -5,7 +5,7 @@ function Header() {
     return (
         <Container>
             <StyledLogo />
-            <Button text={"Sobre"} link={"https://github.com/vitorRibeiro7/pokejan-app-moove"} />
+            <Button text={"Sobre"} onClick={"https://github.com/vitorRibeiro7/pokejan-app-moove"} />
         </Container>
     );
 }
