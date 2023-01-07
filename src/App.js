@@ -9,24 +9,31 @@ import TypesHub from "./components/PokeHub";
 function App() {
 
   const [pokemon, setPokemon] = useState([])
-  const [busca, setBusca] = useState("pikachu")
-  const [erro, setErro] = useState(false);
+  const [search, setSearch] = useState("pikachu")
+  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [pokemonByType, setPokemonByType] = useState([])
   const [pokemonByTypeControl, setPokemonByTypeControl] = useState(false)
 
   const fetchPokemon = async (nome) => {
     try {
+
+      {
+        if (!nome) {
+          return
+        }
+      }
+
       setLoading(true)
 
       const { data } = await api.get(`/pokemon/${nome}`);
 
-      setErro(false)
+      setError(false)
 
       setPokemon(data);
     } catch (error) {
       // console.log(error);
-      setErro(true)
+      setError(true)
     } finally {
       setLoading(false)
     }
@@ -48,25 +55,25 @@ function App() {
   }
 
   const searchByType = (e) => {
-    setBusca(e);
+    setSearch(e);
     setPokemonByTypeControl(false)
     fetchPokemon(e)
   }
 
   useEffect(() => {
     setPokemonByTypeControl(false)
-    fetchPokemon(busca)
-  }, [busca])
+    fetchPokemon(search)
+  }, [search])
 
   useEffect(() => {
-    fetchPokemon(busca)
+    fetchPokemon(search)
   }, [])
 
   return (
     <Container>
       <Header />
       <MainWapper>
-        <Search click={fetchPokemon} flag={erro} />
+        <Search click={fetchPokemon} flag={error} />
         <ShowCard pokeInfo={pokemon} loading={loading} handleTypess={handlePokeByTypes} />
         <TypesHub pokeInfo={pokemonByType} flag={pokemonByTypeControl} click={searchByType} />
       </MainWapper>

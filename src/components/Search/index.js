@@ -3,19 +3,19 @@ import { StyledInput, InputWapper, SearchButton, StyledSearchIcon, Container, St
 
 function Search({ click, change, flag }) {
 
-    const handleBusca = (e) => {
-        setBusca(e.target.value)
+    const handleSearch = (e) => {
+        setSearch(e.target.value)
     }
 
-    const [busca, setBusca] = useState("")
+    const [search, setSearch] = useState("")
 
     return (
         <Container>
             <InputWapper>
-                <StyledInput type={"text"} placeholder="Invoque seu pokemon" onChange={handleBusca} />
-                <SearchButton onClick={() => click(busca)}>Search <StyledSearchIcon /></SearchButton>
+                <StyledInput type={"text"} placeholder="Invoque um pokemon" onChange={handleSearch} />
+                <SearchButton onClick={() => click(search)}><StyledSearchIcon /></SearchButton>
             </InputWapper>
-            {flag && <StyledWarning>Pokemon not found</StyledWarning>}
+            {flag && <StyledWarning>Pokemon não encontrado</StyledWarning>}
         </Container>
     )
 }
