@@ -1,10 +1,10 @@
 import { Container } from "./style";
 
-function TypeCard(props) {
+function TypeCard({ children, color, click }) {
 
     return (
-        <Container style={{ backgroundColor: props.color }}>
-            {props.children}
+        <Container style={{ backgroundColor: color }} onClick={click}>
+            {children}
         </Container>
     )
 }

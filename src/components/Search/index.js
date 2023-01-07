@@ -3,9 +3,9 @@ import { StyledInput, InputWapper, SearchButton, StyledSearchIcon, Container, St
 function Search({ click, change, flag }) {
 
     return (
-        <Container> 
+        <Container>
             <InputWapper>
-                <StyledInput type={"text"} placeholder="Try to get some" onChange={change} />
+                <StyledInput type={"text"} placeholder="Invoque seu pokemon" onChange={change} />
                 <SearchButton onClick={click}>Search <StyledSearchIcon /></SearchButton>
             </InputWapper>
             {flag && <StyledWarning>Pokemon not found</StyledWarning>}

@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const MainView = styled.div`
     width: auto;
     height: auto;
-    min-height: 600px;
+    min-height: 200px;
+    min-width: 70vw;
+    max-width: 70vw;
 
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
@@ -17,7 +19,7 @@ export const MainView = styled.div`
 
     margin-top: 32px;
 
-    padding-bottom: 20px;
+    padding: 20px;
 
     @media (max-width: 1450px) {
         width: 80vw !important;
@@ -27,20 +29,25 @@ export const MainView = styled.div`
         height: auto;
         min-height: 0;
         width: 80vw !important;
+
+        max-width: none;
     }
 
     @media (max-width: 992px) {
         height: auto;
         min-height: 0;
         width: 95vw !important;
+
+        max-width: none;
     }
 
     @media (max-width: 600px) {
         height: auto;
-        min-height: 0;
+        min-height: 160px;
         width: 95vw !important;
         padding: 0;
     
+        max-width: none;
     }
 `
 export const InfoWrapper = styled.div`
@@ -57,7 +64,7 @@ export const InfoWrapper = styled.div`
     padding-left: 0;
 
     @media (max-width: 1450px) {
-        width: 90%;
+        width: 50%;
         height: auto;
         min-width: 0;
 
@@ -131,6 +138,19 @@ export const StyledImage = styled.img`
     min-width: 300px;
 
     object-fit: cover;
+
+    @media (max-width: 1450px) {
+        width: 400px;
+    }
+    
+    @media (max-width: 1290px) {
+
+    }
+
+    @media (max-width: 992px) {
+
+    }
+
 
     @media (max-width: 600px) {
         width: 50%;

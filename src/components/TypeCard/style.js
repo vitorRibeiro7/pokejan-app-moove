@@ -10,6 +10,8 @@ export const Container = styled.button`
     padding: 5px 30px;
     gap: 10px;
 
+    cursor: pointer;
+
     max-width: auto;
     height: auto;
 
@@ -25,4 +27,6 @@ export const Container = styled.button`
     color: #FFFFFF;
 
     margin: 2px;
+
+    flex-grow: 4;
 `

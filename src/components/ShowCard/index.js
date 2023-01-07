@@ -1,6 +1,6 @@
 import { MainView, StyledImage, ImageWrapper, InfoWrapper, StyledH1, StyledText, EvolutionButton, TypesWrapper } from "./style";
 import Loader from "../Loader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import TypeCard from "../TypeCard";
 
@@ -135,54 +135,43 @@ const types = [
 
 ]
 
-function ShowCard({ pokeInfo, loading }) {
-
-    const [pictures, setPictures] = useState([])
-
-    const handlePictures = async () => {
-        try {
-            const { data } = await api.get(`https://pokeapi.co/api/v2/pokemon/${pokeInfo.name}/evolution-chain`);
-            console.log(data);
-        } catch (error) {
-            console.log(error);
-        } finally {
-        }
-    }
+function ShowCard({ pokeInfo, loading, handleTypess }) {
 
     return (
-        <MainView>
-            {!loading ?
-                <>
-                    <ImageWrapper>
-                        <StyledImage src={`${pokeInfo?.sprites?.other.home.front_default}`} alt={`foto ilustrativa`}></StyledImage>
-                        <EvolutionButton onClick={handlePictures}>Evoluir</EvolutionButton>
-                    </ImageWrapper>
-                    <InfoWrapper>
-                        <StyledH1>{`${pokeInfo?.name?.charAt(0).toUpperCase() + pokeInfo?.name?.slice(1)}`}</StyledH1>
-                        {
-                            pokeInfo?.stats?.map((dado, key) => {
-                                const title = titles.find(title => title.default === dado.stat.name);
-                                return <StyledText key={key}>{`${title.ptBR}: ${dado.base_stat}`}</StyledText>;
-                            })
-                        }
-                        <TypesWrapper>
-                            <TypesWrapper>
-                                <StyledText>Tipo:</StyledText>
-                            </TypesWrapper>
+        <>
+            <MainView>
+                {!loading ?
+                    <>
+                        <ImageWrapper>
+                            <StyledImage src={`${pokeInfo?.sprites?.other.home.front_default}`} alt={`foto ilustrativa`}></StyledImage>
+                            {/* <EvolutionButton onClick={handlePictures}>Evoluir</EvolutionButton> */}
+                        </ImageWrapper>
+                        <InfoWrapper>
+                            <StyledH1>{`${pokeInfo?.name?.charAt(0).toUpperCase() + pokeInfo?.name?.slice(1)}`}</StyledH1>
                             {
-                                pokeInfo?.types?.map((dado, key) => {
-                                    const type = types.find(types => types.name === dado.type.name);
-                                    return <TypeCard key={key} color={type.color}>{`${type.text}`}</TypeCard>;
+                                pokeInfo?.stats?.map((dado, key) => {
+                                    const title = titles.find(title => title.default === dado.stat.name);
+                                    return <StyledText key={key}>{`${title.ptBR}: ${dado.base_stat}`}</StyledText>;
                                 })
                             }
-                        </TypesWrapper>
-                    </InfoWrapper>
-                </>
-                :
-                <Loader />
-            }
-
-        </MainView>
+                            <TypesWrapper>
+                                <TypesWrapper>
+                                    <StyledText>Tipo:</StyledText>
+                                </TypesWrapper>
+                                {
+                                    pokeInfo?.types?.map((dado, key) => {
+                                        const type = types.find(types => types.name === dado.type.name);
+                                        return <TypeCard key={key} color={type.color} click={() => handleTypess(type)}>{`${type.text}`}</TypeCard>;
+                                    })
+                                }
+                            </TypesWrapper>
+                        </InfoWrapper>
+                    </>
+                    :
+                    <Loader />
+                }
+            </MainView>
+        </>
     )
 }
 
