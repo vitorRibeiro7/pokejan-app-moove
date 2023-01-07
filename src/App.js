@@ -4,16 +4,18 @@ import Search from "./components/Search";
 import ShowCard from "./components/ShowCard";
 import { MainWapper, Container } from "./style";
 import { api } from "./services/api";
+import Loader from "./components/Loader";
 
 function App() {
 
   const [pokemon, setPokemon] = useState([])
   const [busca, setBusca] = useState("pikachu")
   const [flag, setFlag] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const fetchPokemon = async () => {
     try {
-
+      setLoading(true)
       const { data } = await api.get(`/pokemon/${busca}`);
       setFlag(false)
       console.log(data);
@@ -21,11 +23,13 @@ function App() {
     } catch (error) {
       // console.log(error);
       setFlag(true)
+    } finally {
+      setLoading(false)
     }
   };
 
   useEffect(() => {
-    fetchPokemon();
+    fetchPokemon()
   }, [])
 
   const handleBusca = (e) => {
@@ -37,7 +41,11 @@ function App() {
       <Header />
       <MainWapper>
         <Search change={handleBusca} click={fetchPokemon} flag={flag} />
-        <ShowCard data={pokemon} />
+        
+        {
+          !loading ? <ShowCard data={pokemon} /> : <Loader />
+        }
+
       </MainWapper>
     </Container>
   );

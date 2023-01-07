@@ -1,20 +1,22 @@
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
-import { MainView, StyledImage, ImageWrapper, InfoWrapper } from "./style";
-import DefImg from "../../assets/img/teste.png";
-
+import { MainView, StyledImage, ImageWrapper, InfoWrapper, StyledH1, StyledText } from "./style";
 
 function ShowCard({ data }) {
+
+    console.log("teste", data)
 
     return (
         <MainView>
             <ImageWrapper>
-                <StyledImage src={`${data.lenght == 0 ? DefImg : data?.sprites?.other.home.front_default}`} alt={`foto ilustrativa`}></StyledImage>
+                <StyledImage src={`${data?.sprites?.other.home.front_default}`} alt={`foto ilustrativa`}></StyledImage>
             </ImageWrapper>
             <InfoWrapper>
-                <h1 >{`${data?.name}`}</h1>
+                <StyledH1>{`${data?.name?.charAt(0).toUpperCase() + data?.name?.slice(1)}`}</StyledH1>
+                {
+                    data?.stats?.map((dado, key) => <StyledText key={key}>{`${dado.stat.name.charAt(0).toUpperCase() + dado.stat.name.slice(1)}: ${dado.base_stat}`}</StyledText>)
+                }
+                
             </InfoWrapper>
-        </MainView >
+        </MainView>
     )
 }
 
