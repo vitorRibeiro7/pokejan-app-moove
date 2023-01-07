@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+
+  overflow-x: hidden;
 }
 
 body {
@@ -13,7 +15,11 @@ body {
   justify-content: center;
   align-items: center;
 
+  max-width: 100vw;
+
   background-color: #F3F6F9;
 
   padding: 16px 0px;
+
+  overflow-x: hidden;
 }

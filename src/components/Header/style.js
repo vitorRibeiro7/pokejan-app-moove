@@ -14,8 +14,6 @@ export const Container = styled.div`
     background: linear-gradient(270deg, #0059B2 0%, #007FFF 100%);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-
-
 `;
 
 export const StyledLogo = styled(Logo)`

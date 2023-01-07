@@ -71,7 +71,7 @@ export const SearchButton = styled.button`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 10px 10px 10px 10px;
     gap: 5px;
 
     border: none;
@@ -114,10 +114,13 @@ export const SearchButton = styled.button`
         height: 15vw;
         font-size: 4vw;
     }
+
+    overflow-y: hidden;
 `
 
 export const StyledSearchIcon = styled(Icon)`
-    width: 2vw;
+    width: auto;
+    max-width: 50px;
 
     @media (max-width: 1450px) {
         width: 3vw;

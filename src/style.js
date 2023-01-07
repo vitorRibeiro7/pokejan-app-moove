@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: center;
 `
 export const MainWapper = styled.div`
-    width: 80vw;
+    width: 100vw;
     height: auto;
 
     display: flex;
@@ -16,5 +16,9 @@ export const MainWapper = styled.div`
     flex-direction: column;
 
     margin-top: 20px;
-    padding: 32px;
+    padding: 10px;
+
+    @media (max-width: 600px) {
+        padding: 0;
+    }
 `

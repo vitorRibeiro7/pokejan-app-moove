@@ -41,11 +41,7 @@ function App() {
       <Header />
       <MainWapper>
         <Search change={handleBusca} click={fetchPokemon} flag={flag} />
-        
-        {
-          !loading ? <ShowCard data={pokemon} /> : <Loader />
-        }
-
+        <ShowCard pokeInfo={pokemon} loading={loading} />
       </MainWapper>
     </Container>
   );

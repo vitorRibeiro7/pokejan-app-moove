@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const MainView = styled.div`
-    width: 100%;
+    width: auto;
     height: auto;
+    min-height: 600px;
 
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
@@ -11,13 +12,39 @@ export const MainView = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     margin-top: 32px;
+
+    padding-bottom: 20px;
+
+    @media (max-width: 1450px) {
+        width: 80vw !important;
+    }
+    
+    @media (max-width: 1290px) {
+        height: auto;
+        min-height: 0;
+        width: 80vw !important;
+    }
+
+    @media (max-width: 992px) {
+        height: auto;
+        min-height: 0;
+        width: 95vw !important;
+    }
+
+    @media (max-width: 600px) {
+        height: auto;
+        min-height: 0;
+        width: 95vw !important;
+        padding: 0;
+    
+    }
 `
 export const InfoWrapper = styled.div`
-    width: 50%;
+    width: 40ww;
     height: 600px;
     min-width: 400px;
 
@@ -26,26 +53,89 @@ export const InfoWrapper = styled.div`
     justify-content: center;
     align-items: left;
 
-    text-decoration: dashed;
-
     padding: 32px;
+    padding-left: 0;
+
+    @media (max-width: 1450px) {
+        width: 90%;
+        height: auto;
+        min-width: 0;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+
+        padding: 10px 0px 20px 0px;
+    }
+    
+    @media (max-width: 1290px) {
+        width: 90%;
+        height: auto;
+        min-width: 0;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+
+        padding: 10px 0px 20px 0px;
+    }
+
+    @media (max-width: 992px) {
+        width: 90%;
+        height: auto;
+        min-width: 0;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+
+        padding: 10px 0px 20px 0px;
+    }
+
+    @media (max-width: 600px) {
+        width: 90%;
+        height: auto;
+        min-width: 0;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+
+        padding: 10px 0px 20px 0px;
+    }
 `
 
 export const ImageWrapper = styled.div`
-    width: 50%;
-    height: 600px;
+    width: 40vw;
+    max-height: 600px;
     min-width: 400px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    gap: 10px;
 `
 
 export const StyledImage = styled.img`
-    max-width: 600;
+    max-width: 40vw;
+    min-width: 300px;
 
-    object-fit: contain;
-    /* filter: drop-shadow( 2px 2px 9px #0059B2); */
+    object-fit: cover;
+
+    @media (max-width: 600px) {
+        width: 50%;
+        max-width: 50%;
+    }
 `
 export const StyledH1 = styled.h1`
     font-family: 'Poppins';
@@ -69,4 +159,36 @@ export const StyledText = styled.p`
     margin: 2px 0px;
 
     color: #0A1929;
+`
+
+export const EvolutionButton = styled.button`
+    cursor: pointer;
+
+    width: auto;
+    height: auto;
+    padding: 8px 32px;
+    background: #007FFF;
+
+    border-radius: 10px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    
+    color: #FFF;
+
+    border: none;
+`
+
+export const TypesWrapper = styled.div`
+    width: 100%;
+    height: auto;
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 `

@@ -8,8 +8,6 @@ export const StyledLoader = styled.div`
     border: 8px solid black;
     animation: spin 1s linear infinite;
 
-    margin-top: 200px;
-
     ::before {
         content: '';
         position: absolute;
