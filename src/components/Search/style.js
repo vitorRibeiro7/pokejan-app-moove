@@ -13,11 +13,17 @@ export const InputWapper = styled.div`
     width: auto;
 `
 
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
 export const StyledInput = styled.input`
     padding: 16px 5px 16px 29px;
 
     width: 20vw;
-    height: 3vw;
+    height: 3.5vw;
 
     background: #FFFFFF;
     border: 2px solid #007FFF;
@@ -35,13 +41,13 @@ export const StyledInput = styled.input`
 
     @media (max-width: 1450px) {
         width: 25vw !important;
-        height: 4vw;
+        height: 4.5vw;
         font-size: 1.5vw;
     }
     
     @media (max-width: 1290px) {
         width: 40vw !important;
-        height: 5vw;
+        height: 6vw;
         font-size: 2vw;
     }
 
@@ -53,7 +59,7 @@ export const StyledInput = styled.input`
 
     @media (max-width: 600px) {
         width: 60vw !important;
-        height: 12vw;
+        height: 15vw;
         font-size: 4vw;
     }
 `
@@ -63,13 +69,13 @@ export const SearchButton = styled.button`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 17px;
-    gap: 10px;
+    padding: 15px;
+    gap: 5px;
 
     border: none;
 
-    width: 10vw;
-    height: 3vw;
+    width: auto;
+    height: 3.5vw;
 
     background: #007FFF;
     border-radius: 0px 15px 15px 0px;
@@ -80,17 +86,18 @@ export const SearchButton = styled.button`
     font-weight: 700;
     font-size: 1.3vw;
 
+    cursor: pointer;
     color: #FFFFFF;
 
     @media (max-width: 1450px) {
         width: 15vw !important;
-        height: 4vw;
+        height: 4.5vw;
         font-size: 1.5vw;
     }
     
     @media (max-width: 1290px) {
         width: 20vw !important;
-        height: 5vw;
+        height: 6vw;
         font-size: 2vw;
     }
 
@@ -102,7 +109,7 @@ export const SearchButton = styled.button`
 
     @media (max-width: 600px) {
         width: 30vw !important;
-        height: 12vw;
+        height: 15vw;
         font-size: 4vw;
     }
 `
@@ -125,4 +132,14 @@ export const StyledSearchIcon = styled(Icon)`
     @media (max-width: 600px) {
         width: 6vw;
     }
+`
+
+export const StyledWarning = styled.div`
+
+    margin-top: 10px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
 `

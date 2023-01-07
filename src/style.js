@@ -6,7 +6,7 @@ export const MainWapper = styled.div`
 
     margin-top: 20px;
 
-    padding: 24px;
+    padding: 32px;
 `
 
 export const Container = styled.div`

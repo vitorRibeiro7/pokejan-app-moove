@@ -1,1 +1,6 @@
-export const api = "https://pokeapi.co/docsv2/"
+import axios from 'axios';
+
+export const api = axios.create({
+    baseURL: "https://pokeapi.co/api/v2",
+    timeout: 10000 // 10 segundos
+});
