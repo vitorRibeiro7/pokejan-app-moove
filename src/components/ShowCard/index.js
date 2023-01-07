@@ -1,7 +1,5 @@
 import { MainView, StyledImage, ImageWrapper, InfoWrapper, StyledH1, StyledText, EvolutionButton, TypesWrapper } from "./style";
 import Loader from "../Loader";
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
 import TypeCard from "../TypeCard";
 
 const titles = [
@@ -143,8 +141,9 @@ function ShowCard({ pokeInfo, loading, handleTypess }) {
                 {!loading ?
                     <>
                         <ImageWrapper>
-                            <StyledImage src={`${pokeInfo?.sprites?.other.home.front_default}`} alt={`foto ilustrativa`}></StyledImage>
-                            {/* <EvolutionButton onClick={handlePictures}>Evoluir</EvolutionButton> */}
+
+                            <StyledImage src={`${pokeInfo?.sprites?.other.home.front_default}`} alt={``}></StyledImage>
+
                         </ImageWrapper>
                         <InfoWrapper>
                             <StyledH1>{`${pokeInfo?.name?.charAt(0).toUpperCase() + pokeInfo?.name?.slice(1)}`}</StyledH1>

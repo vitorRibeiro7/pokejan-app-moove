@@ -1,6 +1,4 @@
 import { MainView, StyledLogo } from "./style";
-import Loader from "../Loader";
-import { api } from "../../services/api";
 import TypeCard from "../TypeCard";
 
 

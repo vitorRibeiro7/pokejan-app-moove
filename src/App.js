@@ -10,31 +10,29 @@ function App() {
 
   const [pokemon, setPokemon] = useState([])
   const [busca, setBusca] = useState("pikachu")
-  const [flag, setFlag] = useState(false);
+  const [erro, setErro] = useState(false);
   const [loading, setLoading] = useState(false);
   const [pokemonByType, setPokemonByType] = useState([])
   const [pokemonByTypeControl, setPokemonByTypeControl] = useState(false)
 
-  const fetchPokemon = async () => {
+  const fetchPokemon = async (nome) => {
     try {
       setLoading(true)
 
-      const { data } = await api.get(`/pokemon/${busca}`);
+      const { data } = await api.get(`/pokemon/${nome}`);
 
-      setFlag(false)
+      setErro(false)
 
       setPokemon(data);
     } catch (error) {
       // console.log(error);
-      setFlag(true)
+      setErro(true)
     } finally {
       setLoading(false)
     }
   };
 
-  const searchByType = (e) => {
-    setBusca(e)
-  }
+
 
   const handlePokeByTypes = async (e) => {
     try {
@@ -49,24 +47,26 @@ function App() {
     }
   }
 
+  const searchByType = (e) => {
+    setBusca(e);
+    setPokemonByTypeControl(false)
+    fetchPokemon(e)
+  }
+
   useEffect(() => {
     setPokemonByTypeControl(false)
-    fetchPokemon()
+    fetchPokemon(busca)
   }, [busca])
 
   useEffect(() => {
-    fetchPokemon()
+    fetchPokemon(busca)
   }, [])
-
-  const handleBusca = (e) => {
-    setBusca(e.target.value.toLowerCase())
-  }
 
   return (
     <Container>
       <Header />
       <MainWapper>
-        <Search change={handleBusca} click={fetchPokemon} flag={flag} />
+        <Search click={fetchPokemon} flag={erro} />
         <ShowCard pokeInfo={pokemon} loading={loading} handleTypess={handlePokeByTypes} />
         <TypesHub pokeInfo={pokemonByType} flag={pokemonByTypeControl} click={searchByType} />
       </MainWapper>
