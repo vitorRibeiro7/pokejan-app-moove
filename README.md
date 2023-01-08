@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+﻿<p align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div id="topo"></div>
+<h1 align="center"><strong>POKEJAN</strong></h1>
+<div align="center">
+<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="blank_">
+<img src="https://img.shields.io/tokei/lines/github/vitorRibeiro7/pokejan-app-moove?style=for-the-badge">
+</a>
+<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="blank_">
+<img src="https://img.shields.io/github/license/vitorRibeiro7/pokejan-app-moove?style=for-the-badge">
+</a>
+<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="blank_">
+<img src="https://img.shields.io/github/contributors/vitorRibeiro7/pokejan-app-moove?style=for-the-badge">
+</a>
+</div>
 
-## Available Scripts
+<h3 align="center">  Uma plataforma online baseada em POKEMON, nela, você pode conhecer mais sobre os pokemons e suas estatisticas, alem de descobrir novos de acordo com seus tipos. </h3>
 
-In the project directory, you can run:
+<div align="center">
+[ <a href="https://pokejan.netlify.app">Acesse o site aqui </a> ]
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img align="center" src="src/assets/.github/readme-capa.svg" width="100%">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<div id="#sobre" align="center">
 
-### `npm run build`
+<h2 align="center"> <strong> Sobre o projeto </strong> </h2>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h4 align="left">Este é um projeto de código aberto onde deixo minha minhas primeiras contribuições e a participação em um processo seletivo para uma vaga de desenvolvedor front end. O projeto em si prevê em seus requisitos, a utilização da POKEAPI V2, uma API RESTFUL baseada em pokemon, que, em sua execução, mantem endpoints que nos proporciona dados sobre os pokemons; vida, ataque, velocidade, foto, entre outras infos e estatisticas.
+<br>
+</h4>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+</div>
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2 align="center"> <strong> Tecnologias utilizadas </strong> </h2>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React](https://pt-br.reactjs.org)
+- [Styled-Components](https://styled-components.com)
+- [Axios](https://axios-http.com/ptbr/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> Veja o arquivo  [package.json](https://github.com/vitorRibeiro7/pokejan-app-moove/blob/main/package.json) para mais detalhes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---
+<h2 align="center"> <strong> Como rodar o projeto: </strong> </h2>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+    # Clone este repositório
+    $ git clone https://github.com/vitorRibeiro7/pokejan-app-moove.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    # Acesse a pasta do projeto
+    $ cd pokejan-app-moove
 
-### Code Splitting
+    # Instale as dependências
+    $ npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    # Inicie o servidor
+    $ npm start
+```
+---
+<h2 align="center"> <strong> Como contribuir com o projeto: </strong> </h2>
 
-### Analyzing the Bundle Size
+```
+    1. Faça um [fork] do projeto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
 
-### Making a Progressive Web App
+    3. Salve as alterações e crie um commit: `git commit -m "feature: My new feature"`
+    
+    4. Envie as suas alterações: `git push origin my-feature`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    5. Abra um pull request e avise o que foi feito por você nesta contribuição
+```
+> Lembre-se de checar o [Prototipo](https://www.figma.com/proto/tWisTQkWo3uGR163IXeMib/PROJETO-IHC?page-id=8%3A2&node-id=312%3A1392&viewport=3155%2C-702%2C0.85&scaling=scale-down&starting-point-node-id=312%3A1416&show-proto-sidebar=1).
+---
 
-### Advanced Configuration
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">[ <a href="#topo">Voltar para o topo</a> ]</p>
