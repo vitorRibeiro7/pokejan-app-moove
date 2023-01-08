@@ -51,7 +51,7 @@
 
 
 ---
-<h2 align="center"> <strong> Como rodar o projeto: </strong> </h2>
+<h2 align="center"> <strong> Como rodar o projeto </strong> </h2>
 
 ```bash
     # Clone este repositório
@@ -67,7 +67,7 @@
     $ npm start
 ```
 ---
-<h2 align="center"> <strong> Como contribuir com o projeto: </strong> </h2>
+<h2 align="center"> <strong> Como contribuir com o projeto </strong> </h2>
 
 ```
     1. Faça um [fork] do projeto.
