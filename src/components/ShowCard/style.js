@@ -17,7 +17,7 @@ export const MainView = styled.div`
     justify-content: center;
     align-items: center;
 
-    margin-top: 32px;
+    /* margin-top: 32px; */
 
     padding: 20px;
 

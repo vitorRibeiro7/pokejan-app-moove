@@ -7,7 +7,7 @@ export const InputWapper = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
+    
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 
     width: auto;
@@ -21,12 +21,12 @@ export const Container = styled.div`
     min-height: 100px; 
 
     @media (max-width: 1450px) {
-    min-height: 0; 
+        min-height: 100px; 
     }
 `
 
 export const StyledInput = styled.input`
-    padding: 16px 5px 16px 29px;
+    padding: 16px 5px 16px 12px;
 
     width: 20vw;
     height: 3.5vw;
@@ -75,7 +75,7 @@ export const SearchButton = styled.button`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px 10px 10px;
+    padding: 15px;
     gap: 5px;
 
     border: none;
@@ -96,25 +96,25 @@ export const SearchButton = styled.button`
     color: #FFFFFF;
 
     @media (max-width: 1450px) {
-        width: 15vw !important;
+        width: 5vw !important;
         height: 3.5vw;
         font-size: 1.3vw;
     }
     
     @media (max-width: 1290px) {
-        width: 20vw !important;
+        width: 8vw !important;
         height: 6vw;
         font-size: 2vw;
     }
 
     @media (max-width: 992px) {
-        width: 20vw !important;
+        width: 10vw !important;
         height: 8vw;
         font-size: 3vw;
     }
 
     @media (max-width: 600px) {
-        width: 30vw !important;
+        width: 20vw !important;
         height: 15vw;
         font-size: 4vw;
     }
@@ -127,7 +127,7 @@ export const StyledSearchIcon = styled(Icon)`
     max-width: 50px;
 
     @media (max-width: 1450px) {
-        width: 1.3vw;
+        width: 2vw;
     }
     
     @media (max-width: 1290px) {

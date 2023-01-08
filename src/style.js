@@ -15,7 +15,7 @@ export const MainWapper = styled.div`
     align-items: center;
     flex-direction: column;
 
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
 
     @media (max-width: 600px) {
