@@ -17,7 +17,7 @@
 <h3 align="center">  Uma plataforma online baseada em POKEMON, nela, você pode conhecer mais sobre os pokemons e suas estatisticas, alem de descobrir novos de acordo com seus tipos. </h3>
 
 <div align="center">
-[ <a href="https://pokejan.netlify.app">Acesse o site aqui </a> ]
+[ <a href="https://pokejan.netlify.app" target="blank_">Acesse o site aqui </a> ]
 </div>
 
 ---
