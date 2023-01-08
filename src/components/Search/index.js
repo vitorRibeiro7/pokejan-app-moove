@@ -4,7 +4,7 @@ import { StyledInput, InputWapper, SearchButton, StyledSearchIcon, Container, St
 function Search({ click, change, flag }) {
 
     const handleSearch = (e) => {
-        setSearch(e.target.value)
+        setSearch(e.target.value.toLowerCase())
     }
 
     const [search, setSearch] = useState("")

@@ -1,4 +1,4 @@
-import { MainView, StyledImage, ImageWrapper, InfoWrapper, StyledH1, StyledText, EvolutionButton, TypesWrapper } from "./style";
+import { MainView, StyledImage, ImageWrapper, InfoWrapper, StyledH1, StyledText, TypesWrapper } from "./style";
 import Loader from "../Loader";
 import TypeCard from "../TypeCard";
 
@@ -134,19 +134,18 @@ const types = [
 ]
 
 function ShowCard({ pokeInfo, loading, handleTypess }) {
-
     return (
         <>
             <MainView>
                 {!loading ?
                     <>
                         <ImageWrapper>
-
                             <StyledImage src={`${pokeInfo?.sprites?.other.home.front_default}`} alt={``}></StyledImage>
-
                         </ImageWrapper>
                         <InfoWrapper>
                             <StyledH1>{`${pokeInfo?.name?.charAt(0).toUpperCase() + pokeInfo?.name?.slice(1)}`}</StyledH1>
+                            <StyledText>{`Altura: ${pokeInfo?.height}`}</StyledText>
+                            <StyledText>{`Peso: ${pokeInfo?.weight}`}</StyledText>
                             {
                                 pokeInfo?.stats?.map((dado, key) => {
                                     const title = titles.find(title => title.default === dado.stat.name);

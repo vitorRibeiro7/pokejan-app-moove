@@ -1,16 +1,14 @@
 import { MainView, StyledLogo } from "./style";
-import TypeCard from "../TypeCard";
+import PokeCard from "../PokeCard";
 
 
 function PokeHub({ pokeInfo, flag, click }) {
-
-
 
     return (
         <MainView>
             {flag ?
                 pokeInfo.map((poke, key) => {
-                    return <TypeCard key={key} color={`#007FFF`} click={() => click(poke.pokemon.name)} > {`${poke.pokemon.name}`}</TypeCard>;
+                    return <PokeCard key={key} click={() => click(poke.pokemon.name)} > {`${poke.pokemon.name}`}</PokeCard>;
                 })
                 :
                 <StyledLogo />

@@ -18,19 +18,16 @@ function App() {
   const fetchPokemon = async (nome) => {
     try {
 
-      {
-        if (!nome) {
-          return
-        }
+
+      if (!nome) {
+        return
       }
 
       setLoading(true)
-
       const { data } = await api.get(`/pokemon/${nome}`);
-
       setError(false)
-
       setPokemon(data);
+      setPokemonByTypeControl(false)
     } catch (error) {
       // console.log(error);
       setError(true)
@@ -40,15 +37,13 @@ function App() {
   };
 
 
-
   const handlePokeByTypes = async (e) => {
     try {
       setPokemonByTypeControl(false)
       const { data } = await api.get(`https://pokeapi.co/api/v2/type/${e.name}`)
-      console.log(data)
       setPokemonByType(data.pokemon);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     } finally {
       setPokemonByTypeControl(true)
     }
@@ -67,7 +62,7 @@ function App() {
 
   useEffect(() => {
     fetchPokemon(search)
-  }, [])
+  }, [search])
 
   return (
     <Container>

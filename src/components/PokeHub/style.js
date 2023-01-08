@@ -5,8 +5,8 @@ export const MainView = styled.div`
     width: auto;
     height: auto;
     min-height: 200px;
-    min-width: 70vw;
-    max-width: 70vw;
+    min-width: 60vw;
+    max-width: 60vw;
 
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);

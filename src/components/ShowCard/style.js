@@ -4,8 +4,8 @@ export const MainView = styled.div`
     width: auto;
     height: auto;
     min-height: 200px;
-    min-width: 70vw;
-    max-width: 70vw;
+    min-width: 60vw;
+    max-width: 60vw;
 
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
@@ -13,7 +13,7 @@ export const MainView = styled.div`
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
 
@@ -29,7 +29,7 @@ export const MainView = styled.div`
         height: auto;
         min-height: 0;
         width: 80vw !important;
-
+        flex-wrap: wrap;
         max-width: none;
     }
 
@@ -46,6 +46,9 @@ export const MainView = styled.div`
         min-height: 160px;
         width: 95vw !important;
         padding: 0;
+
+        flex-wrap: wrap;
+
     
         max-width: none;
     }
