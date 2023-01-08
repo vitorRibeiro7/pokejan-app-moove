@@ -80,7 +80,7 @@
 
     5. Abra um pull request e avise o que foi feito por você nesta contribuição
 ```
-> Lembre-se de checar o [Prototipo](https://www.figma.com/proto/tWisTQkWo3uGR163IXeMib/PROJETO-IHC?page-id=8%3A2&node-id=312%3A1392&viewport=3155%2C-702%2C0.85&scaling=scale-down&starting-point-node-id=312%3A1416&show-proto-sidebar=1).
+> Lembre-se de checar o [Prototipo](https://github.com/vitorRibeiro7/pokejan-app-moove).
 ---
 
 <br>
