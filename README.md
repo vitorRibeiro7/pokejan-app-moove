@@ -3,13 +3,13 @@
 <div id="topo"></div>
 <h1 align="center"><strong>POKEJAN</strong></h1>
 <div align="center">
-<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="blank_">
+<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="_blank">
 <img src="https://img.shields.io/tokei/lines/github/vitorRibeiro7/pokejan-app-moove?style=for-the-badge">
 </a>
-<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="blank_">
+<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="_blank">
 <img src="https://img.shields.io/github/license/vitorRibeiro7/pokejan-app-moove?style=for-the-badge">
 </a>
-<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="blank_">
+<a href="https://github.com/vitorRibeiro7/pokejan-app-moove" target="_blank">
 <img src="https://img.shields.io/github/contributors/vitorRibeiro7/pokejan-app-moove?style=for-the-badge">
 </a>
 </div>
@@ -17,7 +17,7 @@
 <h3 align="center">  Uma plataforma online baseada em POKEMON, nela, você pode conhecer mais sobre os pokemons e suas estatisticas, alem de descobrir novos de acordo com seus tipos. </h3>
 
 <div align="center">
-[ <a href="https://pokejan.netlify.app" target="blank_">Acesse o site aqui </a> ]
+[ <a href="https://pokejan.netlify.app" target="_blank">Acesse o site aqui </a> ]
 </div>
 
 ---
