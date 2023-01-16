@@ -39,7 +39,7 @@ export const StyledInput = styled.input`
 
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1vw;
     line-height: 33px;
 
