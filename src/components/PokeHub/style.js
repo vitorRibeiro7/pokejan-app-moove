@@ -21,6 +21,8 @@ export const MainView = styled.div`
 
     padding: 20px;
 
+    gap: 8px;
+
     @media (max-width: 1450px) {
         width: 80vw !important;
     }
@@ -45,7 +47,6 @@ export const MainView = styled.div`
         height: auto;
         min-height: 160px;
         width: 95vw !important;
-        padding: 0;
     
         max-width: none;
     }
