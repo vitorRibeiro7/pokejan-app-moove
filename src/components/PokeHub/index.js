@@ -1,4 +1,4 @@
-import { MainView, StyledLogo } from "./style";
+import { MainView, StyledText } from "./style";
 import PokeCard from "../PokeCard";
 
 
@@ -11,7 +11,7 @@ function PokeHub({ pokeInfo, flag, click }) {
                     return <PokeCard key={key} click={() => click(poke.pokemon.name)} > {`${poke.pokemon.name}`}</PokeCard>;
                 })
                 :
-                <StyledLogo />
+                <StyledText>Dica: clique em algum tipo do pokemon para listar outros do mesmo tipo...</StyledText>
             }
         </MainView>
     )

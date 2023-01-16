@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as Logo } from "../../assets/logos/LogoAzul.svg";
 
 export const MainView = styled.div`
     width: auto;
@@ -52,33 +51,11 @@ export const MainView = styled.div`
     }
 `
 
-export const StyledLogo = styled(Logo)`
-    width: 5vw;
+export const StyledText = styled.p`
 
-    @media (max-width: 1450px) {
-        width: 10vw !important;
-    }
-    
-    @media (max-width: 1290px) {
-        width: 15vw !important;
-    }
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
 
-    @media (max-width: 992px) {
-        width: 20vw !important;
-    }
-
-    @media (max-width: 600px) {
-        width: 25vw !important;
-    }
-
-    animation: spin 10s linear infinite;
-
-    @keyframes spin {
-    from {
-    transform: rotate(0deg);
-    }
-    to {
-    transform: rotate(360deg);
-    }
-}
 `
