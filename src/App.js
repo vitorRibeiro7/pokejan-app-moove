@@ -4,7 +4,7 @@ import Search from "./components/Search";
 import ShowCard from "./components/ShowCard";
 import { MainWapper, Container } from "./style";
 import { api } from "./services/api";
-import TypesHub from "./components/PokeHub";
+import PokeHub from "./components/PokeHub";
 
 function App() {
 
@@ -70,7 +70,7 @@ function App() {
       <MainWapper>
         <Search click={fetchPokemon} flag={error} />
         <ShowCard pokeInfo={pokemon} loading={loading} handleTypess={handlePokeByTypes} />
-        <TypesHub pokeInfo={pokemonByType} flag={pokemonByTypeControl} click={searchByType} />
+        <PokeHub pokeInfo={pokemonByType} flag={pokemonByTypeControl} click={searchByType} />
       </MainWapper>
     </Container>
   );
