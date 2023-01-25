@@ -7,9 +7,16 @@ function Search({ click, change, flag }) {
         setSearch(e.target.value.toLowerCase())
     }
 
-    const resetInputSearch = () => {
+    const doSearch = () => {
+        click(search)
         setSearch("")
     }
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            doSearch()
+        }
+    });
 
     const [search, setSearch] = useState("")
 
@@ -17,11 +24,7 @@ function Search({ click, change, flag }) {
         <Container>
             <InputWapper id="teste">
                 <StyledInput type={"text"} value={search} placeholder="Invoque um pokemon" onChange={handleSearch} />
-                <SearchButton onClick={() => {
-                    click(search)
-                    resetInputSearch()
-                }
-                }><StyledSearchIcon /></SearchButton>
+                <SearchButton onClick={() => doSearch()}><StyledSearchIcon /></SearchButton>
             </InputWapper>
             {flag && <StyledWarning>Pokemon não encontrado</StyledWarning>}
         </Container>
