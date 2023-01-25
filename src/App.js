@@ -17,8 +17,6 @@ function App() {
 
   const fetchPokemon = async (nome) => {
     try {
-
-
       if (!nome) {
         return
       }
@@ -28,6 +26,7 @@ function App() {
       setError(false)
       setPokemon(data);
       setPokemonByTypeControl(false)
+
     } catch (error) {
       // console.log(error);
       setError(true)
