@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { StyledInput, InputWapper, SearchButton, StyledSearchIcon, Container, StyledWarning } from "./style";
 
-function Search({ click, change, flag }) {
+function Search({ click, flag }) {
 
     const handleSearch = (e) => {
         setSearch(e.target.value.toLowerCase())
@@ -12,11 +12,18 @@ function Search({ click, change, flag }) {
         setSearch("")
     }
 
-    document.addEventListener("keydown", (e) => {
+    useEffect(() => {
+        document.addEventListener("keydown", handleEnterKey);
+        return () => {
+            document.removeEventListener("keydown", handleEnterKey);
+        };
+    });
+
+    const handleEnterKey = (e) => {
         if (e.key === "Enter") {
             doSearch()
         }
-    });
+    };
 
     const [search, setSearch] = useState("")
 
